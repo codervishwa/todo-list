@@ -11,4 +11,9 @@ const LOCAL_STORAGE_CATEGORIES_KEY = "LOCAL_STORAGE_CATEGORIES_KEY";
 // Event: Add category
 newCategoryForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  const category = newCategoryInput.Value;
+  const isCategoryEmpty = !category || !category.trim().length;
+  if (isCategoryEmpty) {
+    return console.log("Please enter a task");
+  }
 });
