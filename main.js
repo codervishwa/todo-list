@@ -8,6 +8,10 @@ const categoriesContainer = document.querySelector("[data-categories]");
 // Local storage keys
 const LOCAL_STORAGE_CATEGORIES_KEY = "LOCAL_STORAGE_CATEGORIES_KEY";
 
+// Application Data
+let categories =
+  JSON.parse(localStorage.getItem(LOCAL_STORAGE_CATEGORIES_KEY)) || [];
+
 // Event: Add category
 newCategoryForm.addEventListener("submit", (e) => {
   e.preventDefault();
